@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- <link rel="stylesheet" href="Task (CSS).css"> -->
+    <!-- <script src="Task (JS).js"></script> -->
+</head>
+<script>
+    function f1() {
+        x = document.getElementById('n1').value;
+        y = document.getElementById('n2').value;
+        z = x * y;
+        document.getElementById('reslt').innerHTML = z;
+    }
+
+    function f2() {
+        x = document.getElementById('n1').value;
+        y = document.getElementById('n2').value;
+        z = x / y;
+        document.getElementById('reslt').innerHTML = z;
+    }
+
+    function f3() {
+        x = document.getElementById('n1').value;
+        y = document.getElementById('n2').value;
+        z = Number(x) + Number(y);
+        document.getElementById('reslt').innerHTML = z;
+    }
+
+    function f4() {
+        x = document.getElementById('n1').value;
+        y = document.getElementById('n2').value;
+        z = x - y;
+        document.getElementById('reslt').innerHTML = z;
+    }
+
+    function f5() {
+        document.getElementById('n1').value = "";
+        document.getElementById('n2').value = "";
+        document.getElementById('reslt').innerHTML = "";
+    }
+</script>
+<style>
+    .contaner {
+        text-align: center;
+        font-size: 250%;
+        width: 500px;
+        height: 560px;
+        border: solid purple 3px;
+        box-shadow: 5px 10px 15px grey, 20px 25px 30px purple;
+        background-color: silver;
+        margin-top: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    
+    .n1 {
+        text-align: center;
+        font-size: 35px;
+        width: 400px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    
+    .n2 {
+        text-align: center;
+        font-size: 35px;
+        width: 400px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    
+    .oprat {
+        margin-top: 25px;
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .ac {
+        font-size: 30px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    body {
+        background-image: url(img.jpeg);
+    }
+    
+    .contaner,
+    .n1,
+    .n2 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+
+<body>
+    <center>
+        <div class="contaner">
+            <label for="n1">Number 1 :</label><br><br>
+            <input name="n1" class="n1" id="n1" type="text"><br><br>
+            <label for="n2">Number 2 :</label><br><br>
+            <input name="n2" class="n2" id="n2" type="text"><br>
+            <div>
+                <div>
+                    <input type="button" class="oprat" onclick="f1()" value="×">
+                    <input type="button" class="oprat" onclick="f2()" value="÷">
+                    <input type="button" class="oprat" onclick="f3()" value="+">
+                    <input type="button" class="oprat" onclick="f4()" value="-">
+                </div>
+                <div>
+                    <input type="button" class="ac" onclick="f5()" value="AC">
+                </div>
+            </div>
+            <div>
+                <label for="reslt">The Reslt Is :</label><br>
+                <div name="reslt" class="reslt" id="reslt" style="font-size: 50px; font-family: 'Times New Roman', Times, serif;"></div>
+            </div>
+        </div>
+    </center>
+
+
+
+</body>
+
+
+</html>
